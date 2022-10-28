@@ -10,7 +10,6 @@ namespace CarLotSimulator
     {
         public Car()
         {
-
         }
         //Car shall have the following properties: Year, Make, Model, EngineNoise, HonkNoise, IsDriveable - DONE
         public int Year { get; set; }
@@ -28,7 +27,7 @@ namespace CarLotSimulator
         }
         public void MakeHonkNoise(string HonkNoise)
         {
-            Console.WriteLine($"This {Year} {Make} {Model} horn makes a {HonkNoise} sound.");
+            Console.WriteLine($"This {Year} {Make} {Model} horn makes a {HonkNoise} sound.");          
         }
 
         public string CanIDriveIt(bool IsDriveable)
