@@ -21,18 +21,18 @@ namespace CarLotSimulator
 
         //Car shall have the following methods: MakeEngineNoise(), MakeHonkNoise() - DONE
         //The methods should take one string parameter: the respective noise property - DONE
-        public void MakeEngineNoise(string EngineNoise)
+        public void MakeEngineNoise(string engineNoise)
         {
-            Console.WriteLine($"This {Year} {Make} {Model} engine is {EngineNoise}.");
+            Console.WriteLine($"This {Year} {Make} {Model} engine is {engineNoise}.");
         }
-        public void MakeHonkNoise(string HonkNoise)
+        public void MakeHonkNoise(string honkNoise)
         {
-            Console.WriteLine($"This {Year} {Make} {Model} horn makes a {HonkNoise} sound.");          
+            Console.WriteLine($"This {Year} {Make} {Model} horn makes a {honkNoise} sound.");          
         }
 
-        public string CanIDriveIt(bool IsDriveable)
+        public string CanIDriveIt(bool isDriveable)
         {
-           return (IsDriveable == true) ? $"This car is driveable!" : $"Sorry, this car does not run.";
+           return (isDriveable == true) ? $"This car is driveable!" : $"Sorry, this car does not run.";
         }
 
 

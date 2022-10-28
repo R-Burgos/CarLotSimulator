@@ -7,7 +7,7 @@ namespace CarLotSimulator
     {
         static void Main(string[] args)
         {
-            CarLot carLot = new CarLot();
+            var carLot = new CarLot();
 
             //TODO
 
@@ -20,7 +20,7 @@ namespace CarLotSimulator
             //Set the properties for each of the cars - DONE
             //Call each of the methods for each car - DONE
 
-            Car car1 = new Car() // Object Initializer Syntax
+            var car1 = new Car() // Object Initializer Syntax
             {
                 Year = 2022,
                 Make = "Toyota",
@@ -32,7 +32,7 @@ namespace CarLotSimulator
 
             carLot.CarList.Add(car1); // Adding car1 to carList
 
-            Car car2 = new Car(); // Dot Notation
+            var car2 = new Car(); // Dot Notation
             car2.Year = 2017;
             car2.Make = "Nissan";
             car2.Model = "Altima";
@@ -42,7 +42,7 @@ namespace CarLotSimulator
 
             carLot.CarList.Add(car2); // Adding car2 to carList
 
-            Car car3 = new Car(2018, "Jeep", "Compass", "loud", "loud beep", true); // Custom Constructor
+            var car3 = new Car(2018, "Jeep", "Compass", "loud", "loud beep", true); // Custom Constructor
 
             carLot.CarList.Add(car3); // Adding car3 to carList
 
@@ -74,22 +74,12 @@ namespace CarLotSimulator
             //Instanciate the a Carlot at the beginning of the program and as you create a car add the car to the list. - DONE
             //At the end iterate through the list printing each of car's Year, Make, and Model to the console - DONE
 
-            foreach (Car car in carLot.CarList)
+            foreach (var car in carLot.CarList)
             {
                 Console.WriteLine($"---------------------");
                 Console.WriteLine($"Year: {car.Year}\nMake: {car.Make}\nModel: {car.Model}\nEngine Noise: {car.EngineNoise}\nHorn Sound: {car.HonkNoise}");
                 Console.WriteLine($"---------------------\n");
             }
-            for (int i = 0; i < 3; i++)
-            {
-                Console.Beep(400, 50);
-                Console.Beep(800, 50);
-                Console.Beep(400, 50);
-
-            }
-
-
-
         }        
     }
 }
