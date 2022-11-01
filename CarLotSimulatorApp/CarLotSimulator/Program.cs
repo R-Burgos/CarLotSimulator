@@ -31,6 +31,9 @@ namespace CarLotSimulator
             };
 
             carLot.CarList.Add(car1); // Adding car1 to carList
+            CarLot.numOfCars = carLot.CarList.Count;
+            Console.WriteLine($"{CarLot.numOfCars} car in the car lot. It is a {car1.Make} {car1.Model}.");
+
 
             var car2 = new Car(); // Dot Notation
             car2.Year = 2017;
@@ -41,25 +44,29 @@ namespace CarLotSimulator
             car2.IsDriveable = false;
 
             carLot.CarList.Add(car2); // Adding car2 to carList
+            CarLot.numOfCars = carLot.CarList.Count;
+            Console.WriteLine($"{CarLot.numOfCars} cars in the car lot. This car is a {car2.Make} {car2.Model}.");
 
             var car3 = new Car(2018, "Jeep", "Compass", "loud", "loud beep", true); // Custom Constructor
 
             carLot.CarList.Add(car3); // Adding car3 to carList
+            CarLot.numOfCars = carLot.CarList.Count;
+            Console.WriteLine($"{CarLot.numOfCars} cars in the car lot. This last car is a {car3.Make} {car3.Model}.\n");
 
             //Calling Methods
             car1.MakeEngineNoise(car1.EngineNoise);
             car1.MakeHonkNoise(car1.HonkNoise);
-            Console.Beep(200, 400);
+           // Console.Beep(200, 400);
             Console.WriteLine(car1.CanIDriveIt(car1.IsDriveable));
             Console.WriteLine(" ");
             car2.MakeEngineNoise(car2.EngineNoise);
             car2.MakeHonkNoise(car2.HonkNoise);
-            Console.Beep(400, 400);
+           // Console.Beep(400, 400);
             Console.WriteLine(car2.CanIDriveIt(car2.IsDriveable));
             Console.WriteLine(" ");
             car3.MakeEngineNoise(car3.EngineNoise);
             car3.MakeHonkNoise(car3.HonkNoise);
-            Console.Beep(1000, 1000);
+          //  Console.Beep(1000, 1000);
             Console.WriteLine(car3.CanIDriveIt(car3.IsDriveable));
             Console.WriteLine(" ");
 
